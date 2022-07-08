@@ -10,10 +10,10 @@ SIMULATION_TABLE = 'STG_SIMULATION'
 ## Initialize connection.
 # Uses st.experimental_singleton to only run once.
 
-'''session = Session.builder.configs(st.secrets["snowflake"]).create()
+session = Session.builder.configs(st.secrets["snowflake"]).create()
 df_simul_pd = session.table('STG_SIMULATION').to_pandas()
 
-def update_table(df, table_name):
+'''def update_table(df, table_name):
     new_simul = session.create_dataframe(df)
     new_simul.write.mode("overwrite").save_as_table(table_name)
 
