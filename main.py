@@ -26,9 +26,9 @@ def add_row():
     print(new_table)
     update_table(new_table, SIMULATION_TABLE)
 
-#st.button("add row", key=None, help=None, on_click=add_row, args=None, kwargs=None, disabled=False)
+st.button("add row", key=None, help=None, on_click=add_row, args=None, kwargs=None, disabled=False)
 grid_return = AgGrid(df_simul_pd, editable=True)
-#update_table(grid_return['data'], SIMULATION_TABLE)
+update_table(grid_return['data'], SIMULATION_TABLE)
 #st.title("test")
 
 # Print results.
