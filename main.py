@@ -12,9 +12,9 @@ SIMULATION_TABLE = 'STG_SIMULATION'
 st.title("tesddt")
 session = Session.builder.configs(st.secrets["snowflake"]).create()
 df_simul = session.table('STG_SIMULATION')
-df_simul_pd = df_simul.to_pandas()
+#df_simul_pd = df_simul.to_pandas()
 
-def update_table(df, table_name):
+'''def update_table(df, table_name):
     new_simul = session.create_dataframe(df)
     new_simul.write.mode("overwrite").save_as_table(table_name)
 
@@ -33,4 +33,4 @@ update_table(grid_return['data'], SIMULATION_TABLE)
 
 # Print results.
 #for row in rows:
-#    st.write(f"{row[0]} has a :{row[1]}:")
+#    st.write(f"{row[0]} has a :{row[1]}:")'''
