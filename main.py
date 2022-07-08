@@ -12,7 +12,7 @@ SIMULATION_TABLE = 'STG_SIMULATION'
 st.title("tesddt")
 session = Session.builder.configs(st.secrets["snowflake"]).create()
 df_simul = session.table('STG_SIMULATION')
-#df_simul_pd = df_simul.to_pandas()
+df_simul_pd = df_simul.to_pandas()
 
 '''def update_table(df, table_name):
     new_simul = session.create_dataframe(df)
