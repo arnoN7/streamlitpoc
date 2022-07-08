@@ -1,6 +1,6 @@
-import streamlit as st
-import pandas as pd
-import numpy as np
+#import streamlit as st
+#import pandas as pd
+#import numpy as np
 import streamlit as st
 from snowflake.snowpark import Session
 from st_aggrid import AgGrid
@@ -10,7 +10,7 @@ SIMULATION_TABLE = 'STG_SIMULATION'
 ## Initialize connection.
 # Uses st.experimental_singleton to only run once.
 
-session = Session.builder.configs(st.secrets["snowflake"]).create()
+'''session = Session.builder.configs(st.secrets["snowflake"]).create()
 df_simul_pd = session.table('STG_SIMULATION').to_pandas()
 
 def update_table(df, table_name):
@@ -23,7 +23,7 @@ def add_row():
     new_table = pd.concat([df_simul_pd, df_simul_pd.iloc[-1:]])
     new_table.iloc[-1][0] = new_table.iloc[-1][0] +1
     print(new_table)
-    update_table(new_table, SIMULATION_TABLE)
+    update_table(new_table, SIMULATION_TABLE)'''
 
 
 #session.sql("select current_warehouse(), current_database(), current_schema()").collect()
