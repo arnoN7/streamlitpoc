@@ -1,6 +1,6 @@
 snowflake-snowpark-python==0.7.0
 streamlit==1.10.0
 cffi==1.15.0
-pandas
-numpy
-streamlit-aggrid
+pandas==1.4.3
+numpy==1.23.0
+streamlit-aggrid==0.2.3.post2
