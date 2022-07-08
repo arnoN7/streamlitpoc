@@ -11,7 +11,7 @@ SIMULATION_TABLE = 'STG_SIMULATION'
 # Uses st.experimental_singleton to only run once.
 st.title("tesddt")
 session = Session.builder.configs(st.secrets["snowflake"]).create()
-df_simul_pd = session.table('STG_SIMULATION').to_pandas()
+df_simul_pd = session.table('STG_SIMULATION')
 
 '''def update_table(df, table_name):
     new_simul = session.create_dataframe(df)
@@ -28,7 +28,7 @@ def add_row():
 #st.button("add row", key=None, help=None, on_click=add_row, args=None, kwargs=None, disabled=False)
 #grid_return = AgGrid(df_simul_pd, editable=True)
 #update_table(grid_return['data'], SIMULATION_TABLE)
-st.title("test")
+#st.title("test")
 
 # Print results.
 #for row in rows:
